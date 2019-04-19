@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.znv.dao.mapper.UsergroupServiceMapper">
+    <!--通过<resultMap>映射实体类属性名和表的字段名对应关系 -->
+    <resultMap type="com.znv.bean.Usergroup" id="usergroupMap">
+        <result property="usergroupId" column="usergroup_id" />
+        <result property="usergroupName" column="usergroup_name" />
+        <result property="usergroupType" column="usergroup_type" />
+        <result property="description" column="description" />
+        <result property="upUsergroupId" column="up_usergroup_id" />
+        <collection property="roles" ofType="com.znv.bean.Role"
+                    column="usergroup_id" select="getRolesT">
+        </collection>
+    </resultMap>
+
+    <resultMap type="java.util.HashMap" id="usergroupRoleMap">
+        <result property="id" column="id" />
+        <result property="usergroupId" column="usergroup_id" />
+        <result property="roleId" column="role_id" />
+    </resultMap>
+
+    <resultMap type="com.znv.bean.Role" id="roleMap">
+        <result property="roleId" column="role_id" />
+        <result property="roleName" column="role_name" />
+        <result property="upRoleId" column="up_role_id" />
+        <result property="description" column="description" />
+    </resultMap>
+
+    <select id="getRolesT" parameterType="LONG" resultMap="roleMap">
+        SELECT * FROM t_cfg_role r JOIN t_link_usergroup_role ur
+        on r.role_id = ur.role_id
+        WHERE
+        ur.usergroup_id = #{usergroup_id}
+    </select>
+
+    <select id="queryUsergroups" resultType="com.znv.bean.Usergroup" resultMap="usergroupMap">
+        SELECT * FROM t_cfg_usergroup
+        WHERE
+        <if test="usergroupIds != null">usergroup_id in (${usergroupIds}) AND </if>
+        <if test="usergroupName != null">usergroup_name = #{usergroupName} AND </if>
+        <if test="usergroupType != null">usergroup_type = #{usergroupType} AND </if>
+        <if test="description != null">description = #{description} AND </if>
+        <if test="upUsergroupId != null">up_usergroup_id = #{upUsergroupId} AND </if>
+        1=1;
+    </select>
+
+    <insert id="insertUsergroup" parameterType="com.znv.bean.Usergroup" useGeneratedKeys="true"
+            keyColumn="usergroup_id" keyProperty="usergroupId">
+
+        INSERT INTO t_cfg_usergroup (usergroup_name, usergroup_type, description, up_usergroup_id)
+        VALUES (
+        #{usergroupName, jdbcType=VARCHAR},
+        #{usergroupType, jdbcType=VARCHAR},
+        #{description, jdbcType=VARCHAR},
+        #{upUsergroupId, jdbcType=BIGINT}
+        );
+    </insert>
+
+    <update id="updateUsergroup" parameterType="map" useGeneratedKeys="false">
+        UPDATE t_cfg_usergroup
+        <set>
+            <if test="usergroupName!=null">usergroup_name = #{usergroupName, jdbcType=VARCHAR}, </if>
+            <if test="usergroupType!=null">usergroup_type = #{usergroupType, jdbcType=VARCHAR}, </if>
+            <if test="description!=null">description = #{description, jdbcType=VARCHAR}, </if>
+            <if test="upUsergroupId!=null">up_usergroup_id = #{upUsergroupId, jdbcType=BIGINT}, </if>
+        </set>
+        WHERE usergroup_id = #{usergroupId};
+    </update>
+
+    <delete id="deleteUsergroups" parameterType="map">
+        DELETE FROM t_cfg_usergroup
+        WHERE
+        <if test="usergroupIds != null">usergroup_id in (${usergroupIds}) AND </if>
+        <if test="usergroupName != null">usergroup_name = #{usergroupName} AND </if>
+        <if test="usergroupType != null">usergroup_type = #{usergroupType} AND </if>
+        <if test="description != null">description = #{description} AND </if>
+        <if test="upUsergroupId != null">up_usergroup_id = #{upUsergroupId} AND </if>
+        1=1;
+    </delete>
+
+    <insert id="addUsergroupRoles" parameterType="map">
+        INSERT INTO t_link_usergroup_role (usergroup_id, role_id) VALUES
+        <foreach collection="roleIds" item="item" separator=",">
+            (
+            #{usergroupId, jdbcType=BIGINT},
+            #{item, jdbcType=BIGINT}
+            )
+        </foreach>
+    </insert>
+
+    <delete id="deleteUsergroupRoles" parameterType="map">
+        DELETE FROM t_link_usergroup_role WHERE
+        <if test="ids != null">id in (${ids}) AND </if>
+        <if test="usergroupId != null">usergroup_id = #{usergroupId} AND </if>
+        <if test="roleIds != null">role_id in (${roleIds}) AND </if>
+        1=1;
+    </delete>
+
+    <update id="updateUsergroupRole" parameterType="map">
+        UPDATE t_link_usergroup_role SET
+        usergroup_id = #{usergroupId, jdbcType=BIGINT},
+        role_id = #{roleId, jdbcType=BIGINT}
+        WHERE id = #{id};
+    </update>
+
+    <select id="queryUsergroupRoles" parameterType="map" resultType="com.znv.bean.Role"
+            resultMap="usergroupRoleMap">
+        SELECT * FROM t_cfg_role r JOIN t_link_usergroup_role ur on r.role_id = ur.role_id
+        WHERE
+        <if test="usergroupId != null">ur.usergroup_id = #{usergroupId} AND </if>
+        1=1;
+    </select>
+
+
+</mapper>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.znv.dao.mapper.PrivilegeServiceMapper">
+    <!--通过<resultMap>映射实体类属性名和表的字段名对应关系 -->
+    <resultMap type="com.znv.bean.Privilege" id="privilegeMap">
+        <result property="privilegeId" column="privilege_id" />
+        <result property="privilegeName" column="privilege_name" />
+        <result property="privilegeType" column="privilege_type" />
+        <result property="description" column="description" />
+        <result property="upPrivilegeId" column="up_privilege_id" />
+        <collection property="modules" ofType="com.znv.bean.Module" column="privilege_id"
+         select="getModules">
+        </collection>
+    </resultMap>
+
+    <resultMap type="com.znv.bean.Module" id="moduleMap">
+        <id property="id" column="id" />
+        <result property="moduleName" column="module_name" />
+        <result property="moduleUrl" column="module_url" />
+        <result property="description" column="description" />
+        <result property="upModuleId" column="up_module_id" />
+    </resultMap>
+
+    <select id="getModules" parameterType="LONG" resultMap="moduleMap">
+        select * from t_cfg_module m JOIN t_link_privilege_module pm
+        ON m.id = pm.module_id
+        WHERE pm.privilege_id = #{privilege_id}
+    </select>
+
+    <select id="queryPrivileges" resultType="map" resultMap="privilegeMap">
+        SELECT * FROM t_cfg_privilege
+        WHERE
+        <if test="privilegeId != null">privilege_id=#{privilegeId} AND </if>
+        <if test="privilegeName != null">privilege_name = #{privilegeName} AND </if>
+        <if test="privilegeType != null">privilege_type = #{privilegeType} AND </if>
+        <if test="description != null">description = #{description} AND </if>
+        <if test="upPrivilegeId != null">up_privilege_id = #{upPrivilegeId} AND </if>
+        1=1;
+    </select>
+
+    <insert id="insertPrivilege" parameterType="com.znv.bean.Privilege" useGeneratedKeys="true"
+            keyProperty="privilegeId" keyColumn="privilege_id">
+        INSERT INTO t_cfg_privilege (privilege_name, privilege_type, description, up_privilege_id)
+        VALUES (
+        #{privilegeName, jdbcType=VARCHAR},
+        #{privilegeType, jdbcType=VARCHAR},
+        #{description, jdbcType=VARCHAR},
+        #{upPrivilegeId, jdbcType=BIGINT}
+        );
+    </insert>
+
+    <update id="updatePrivilege" parameterType="map" useGeneratedKeys="false">
+        UPDATE t_cfg_privilege SET
+        <if test="privilegeName != null">
+            privilege_name = #{privilegeName, jdbcType=VARCHAR}
+        </if>
+        <if test="privilegeType != null">
+            , privilege_type = #{privilegeType, jdbcType=VARCHAR}
+        </if>
+        <if test="description != null">
+            , description = #{description, jdbcType=VARCHAR}
+        </if>
+        <if test="upPrivilegeId != null">
+            , up_privilege_id = #{upPrivilegeId, jdbcType=BIGINT}
+        </if>
+        WHERE privilege_id = #{privilegeId, jdbcType=BIGINT};
+    </update>
+
+    <delete id="deletePrivileges" parameterType="map">
+        DELETE FROM t_cfg_privilege
+        WHERE
+        <if test="privilegeIds != null">privilege_id in (${privilegeIds}) AND </if>
+        <if test="privilegeName != null">privilege_name = #{privilegeName} AND </if>
+        <if test="privilegeType != null">privilege_type = #{privilegeType} AND </if>
+        <if test="description != null">description = #{description} AND </if>
+        <if test="upPrivilegeId != null">up_privilege_id = #{upPrivilegeId} AND </if>
+        1=1;
+    </delete>
+</mapper>

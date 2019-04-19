@@ -1,0 +1,32 @@
+2019-04-17 14:36:47,399 INFO DEFAULT_GROUP@@gate {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [10.45.148.239:8080:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2019-04-17 14:36:47,435 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@gate, ips: 10.45.148.239:8080_true,
+
+2019-04-17 14:43:16,860 INFO {POS} {IP-DISABLED} valid: 10.45.148.239:8080@DEFAULT, region: unknown, msg: client timeout after 15000, last beat: 1555483380667
+
+2019-04-17 14:43:33,583 INFO DEFAULT_GROUP@@gate {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [10.45.148.239:8080:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2019-04-17 14:43:33,583 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@gate, ips: 
+
+2019-04-17 15:55:03,298 INFO DEFAULT_GROUP@@gate {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [10.45.148.239:8080:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2019-04-17 15:55:03,299 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@gate, ips: 10.45.148.239:8080_true,
+
+2019-04-17 15:55:51,094 INFO DEFAULT_GROUP@@gate {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [10.45.148.239:8080:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2019-04-17 15:55:51,094 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@gate, ips: 
+
+2019-04-17 16:19:26,865 INFO DEFAULT_GROUP@@gate {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [10.45.148.239:8080:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2019-04-17 16:19:26,865 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@gate, ips: 10.45.148.239:8080_true,
+
+2019-04-17 16:21:49,601 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@gate, ips: 10.45.148.239:8080_true,
+
+2019-04-17 16:23:17,980 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@gate, ips: 10.45.148.239:8080_true,
+
+2019-04-17 16:24:00,068 INFO {POS} {IP-DISABLED} valid: 10.45.148.239:8080@DEFAULT, region: unknown, msg: client timeout after 15000, last beat: 1555489422906
+
+2019-04-17 16:24:15,242 INFO DEFAULT_GROUP@@gate {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [10.45.148.239:8080:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2019-04-17 16:24:15,242 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@gate, ips: 
+

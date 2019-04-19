@@ -1,0 +1,596 @@
+2019-04-15 00:04:11,598 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 00:09:11,615 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 00:24:03,535 WARN server beat out of date, current: {"adWeight":0,"alive":true,"ip":"10.45.148.239","key":"10.45.148.239:8848","lastRefTime":1555259043535,"lastRefTimeStr":"2019-04-15 00:24:03","servePort":8848,"site":"unknown","weight":2}, last: {"adWeight":0,"alive":false,"ip":"10.45.148.239","key":"10.45.148.239:8848","lastRefTime":1555258436643,"lastRefTimeStr":"2019-04-15 00:13:56","servePort":8848,"site":"unknown","weight":2}
+
+2019-04-15 00:24:03,551 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 00:29:03,568 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 00:34:03,585 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 00:39:03,601 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 00:44:03,618 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 00:51:01,530 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 00:51:01,530 WARN server beat out of date, current: {"adWeight":0,"alive":true,"ip":"10.45.148.239","key":"10.45.148.239:8848","lastRefTime":1555260661530,"lastRefTimeStr":"2019-04-15 00:51:01","servePort":8848,"site":"unknown","weight":2}, last: {"adWeight":0,"alive":false,"ip":"10.45.148.239","key":"10.45.148.239:8848","lastRefTime":1555260528642,"lastRefTimeStr":"2019-04-15 00:48:48","servePort":8848,"site":"unknown","weight":2}
+
+2019-04-15 00:56:01,547 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 01:01:01,564 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 01:06:01,581 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 01:11:01,598 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 01:16:01,615 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 01:21:01,632 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 01:26:01,649 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 01:31:01,666 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 01:33:13,529 WARN server beat out of date, current: {"adWeight":0,"alive":true,"ip":"10.45.148.239","key":"10.45.148.239:8848","lastRefTime":1555263193529,"lastRefTimeStr":"2019-04-15 01:33:13","servePort":8848,"site":"unknown","weight":2}, last: {"adWeight":0,"alive":false,"ip":"10.45.148.239","key":"10.45.148.239:8848","lastRefTime":1555263061702,"lastRefTimeStr":"2019-04-15 01:31:01","servePort":8848,"site":"unknown","weight":2}
+
+2019-04-15 01:36:01,682 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 01:41:01,699 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 01:46:01,716 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 01:51:01,733 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 01:56:01,750 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 02:01:01,767 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 02:06:01,784 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 02:11:01,801 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 02:15:13,533 WARN server beat out of date, current: {"adWeight":0,"alive":true,"ip":"10.45.148.239","key":"10.45.148.239:8848","lastRefTime":1555265713533,"lastRefTimeStr":"2019-04-15 02:15:13","servePort":8848,"site":"unknown","weight":2}, last: {"adWeight":0,"alive":false,"ip":"10.45.148.239","key":"10.45.148.239:8848","lastRefTime":1555265533693,"lastRefTimeStr":"2019-04-15 02:12:13","servePort":8848,"site":"unknown","weight":2}
+
+2019-04-15 02:16:01,810 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 02:21:01,766 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 02:26:01,723 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 02:31:01,679 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 02:36:01,636 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 02:47:39,521 WARN server beat out of date, current: {"adWeight":0,"alive":true,"ip":"10.45.148.239","key":"10.45.148.239:8848","lastRefTime":1555267659521,"lastRefTimeStr":"2019-04-15 02:47:39","servePort":8848,"site":"unknown","weight":2}, last: {"adWeight":0,"alive":false,"ip":"10.45.148.239","key":"10.45.148.239:8848","lastRefTime":1555267213347,"lastRefTimeStr":"2019-04-15 02:40:13","servePort":8848,"site":"unknown","weight":2}
+
+2019-04-15 02:47:39,531 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 02:52:39,548 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 02:57:39,565 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 03:02:39,582 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 03:07:39,599 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 03:19:39,529 WARN server beat out of date, current: {"adWeight":0,"alive":true,"ip":"10.45.148.239","key":"10.45.148.239:8848","lastRefTime":1555269579529,"lastRefTimeStr":"2019-04-15 03:19:39","servePort":8848,"site":"unknown","weight":2}, last: {"adWeight":0,"alive":false,"ip":"10.45.148.239","key":"10.45.148.239:8848","lastRefTime":1555269144628,"lastRefTimeStr":"2019-04-15 03:12:24","servePort":8848,"site":"unknown","weight":2}
+
+2019-04-15 03:19:39,531 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 03:24:39,548 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 03:29:39,565 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 03:34:39,582 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 03:39:39,599 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 03:44:39,616 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 03:54:15,541 WARN server beat out of date, current: {"adWeight":0,"alive":true,"ip":"10.45.148.239","key":"10.45.148.239:8848","lastRefTime":1555271655541,"lastRefTimeStr":"2019-04-15 03:54:15","servePort":8848,"site":"unknown","weight":2}, last: {"adWeight":0,"alive":false,"ip":"10.45.148.239","key":"10.45.148.239:8848","lastRefTime":1555271334655,"lastRefTimeStr":"2019-04-15 03:48:54","servePort":8848,"site":"unknown","weight":2}
+
+2019-04-15 03:54:15,546 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 03:59:15,563 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 04:04:15,580 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 04:09:15,597 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 04:14:15,614 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 04:19:15,631 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 04:24:15,648 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 04:29:15,665 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 04:39:15,529 WARN server beat out of date, current: {"adWeight":0,"alive":true,"ip":"10.45.148.239","key":"10.45.148.239:8848","lastRefTime":1555274355529,"lastRefTimeStr":"2019-04-15 04:39:15","servePort":8848,"site":"unknown","weight":2}, last: {"adWeight":0,"alive":false,"ip":"10.45.148.239","key":"10.45.148.239:8848","lastRefTime":1555273875697,"lastRefTimeStr":"2019-04-15 04:31:15","servePort":8848,"site":"unknown","weight":2}
+
+2019-04-15 04:39:15,532 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 04:44:15,549 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 04:49:15,566 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 04:54:15,583 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 04:59:15,600 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 05:04:15,617 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 05:09:15,634 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 05:24:27,522 WARN server beat out of date, current: {"adWeight":0,"alive":true,"ip":"10.45.148.239","key":"10.45.148.239:8848","lastRefTime":1555277067522,"lastRefTimeStr":"2019-04-15 05:24:27","servePort":8848,"site":"unknown","weight":2}, last: {"adWeight":0,"alive":false,"ip":"10.45.148.239","key":"10.45.148.239:8848","lastRefTime":1555276425675,"lastRefTimeStr":"2019-04-15 05:13:45","servePort":8848,"site":"unknown","weight":2}
+
+2019-04-15 05:24:27,536 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 05:29:27,553 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 05:34:27,570 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 05:39:27,587 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 05:44:27,604 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 05:49:27,620 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 05:54:27,637 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 05:59:27,654 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 06:04:27,671 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 06:09:27,531 WARN server beat out of date, current: {"adWeight":0,"alive":true,"ip":"10.45.148.239","key":"10.45.148.239:8848","lastRefTime":1555279767531,"lastRefTimeStr":"2019-04-15 06:09:27","servePort":8848,"site":"unknown","weight":2}, last: {"adWeight":0,"alive":false,"ip":"10.45.148.239","key":"10.45.148.239:8848","lastRefTime":1555279572706,"lastRefTimeStr":"2019-04-15 06:06:12","servePort":8848,"site":"unknown","weight":2}
+
+2019-04-15 06:09:27,687 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 06:14:27,703 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 06:19:27,720 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 06:24:27,736 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 06:29:27,753 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 06:34:27,770 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 06:39:27,786 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 06:44:27,803 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 06:47:44,531 WARN server beat out of date, current: {"adWeight":0,"alive":true,"ip":"10.45.148.239","key":"10.45.148.239:8848","lastRefTime":1555282064531,"lastRefTimeStr":"2019-04-15 06:47:44","servePort":8848,"site":"unknown","weight":2}, last: {"adWeight":0,"alive":false,"ip":"10.45.148.239","key":"10.45.148.239:8848","lastRefTime":1555282032696,"lastRefTimeStr":"2019-04-15 06:47:12","servePort":8848,"site":"unknown","weight":2}
+
+2019-04-15 06:49:27,819 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 06:54:27,835 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 06:59:27,852 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 07:04:27,869 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 07:09:27,886 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 07:14:27,903 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 07:19:27,920 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 07:24:27,937 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 07:29:27,954 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 07:31:15,519 WARN server beat out of date, current: {"adWeight":0,"alive":true,"ip":"10.45.148.239","key":"10.45.148.239:8848","lastRefTime":1555284675519,"lastRefTimeStr":"2019-04-15 07:31:15","servePort":8848,"site":"unknown","weight":2}, last: {"adWeight":0,"alive":false,"ip":"10.45.148.239","key":"10.45.148.239:8848","lastRefTime":1555284569706,"lastRefTimeStr":"2019-04-15 07:29:29","servePort":8848,"site":"unknown","weight":2}
+
+2019-04-15 07:34:27,969 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 07:39:27,986 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 07:44:28,003 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 07:49:28,020 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 07:54:28,037 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 07:59:28,054 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 08:04:28,071 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 08:09:28,087 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 08:15:52,538 WARN server beat out of date, current: {"adWeight":0,"alive":true,"ip":"10.45.148.239","key":"10.45.148.239:8848","lastRefTime":1555287352538,"lastRefTimeStr":"2019-04-15 08:15:52","servePort":8848,"site":"unknown","weight":2}, last: {"adWeight":0,"alive":false,"ip":"10.45.148.239","key":"10.45.148.239:8848","lastRefTime":1555286985683,"lastRefTimeStr":"2019-04-15 08:09:45","servePort":8848,"site":"unknown","weight":2}
+
+2019-04-15 08:15:52,541 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 08:20:52,558 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 08:25:52,575 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 08:30:52,592 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 08:35:52,609 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 08:41:20,520 WARN server beat out of date, current: {"adWeight":0,"alive":true,"ip":"10.45.148.239","key":"10.45.148.239:8848","lastRefTime":1555288880520,"lastRefTimeStr":"2019-04-15 08:41:20","servePort":8848,"site":"unknown","weight":2}, last: {"adWeight":0,"alive":false,"ip":"10.45.148.239","key":"10.45.148.239:8848","lastRefTime":1555288837646,"lastRefTimeStr":"2019-04-15 08:40:37","servePort":8848,"site":"unknown","weight":2}
+
+2019-04-15 08:41:20,521 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 08:46:20,538 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 08:51:20,555 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 08:56:20,571 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 09:01:20,588 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 09:06:20,604 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 09:11:20,621 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 09:16:20,638 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 09:21:20,655 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 09:26:20,671 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 09:31:20,688 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 09:36:20,705 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 09:41:20,722 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 09:46:20,739 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 09:51:20,756 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 09:56:20,773 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 10:01:20,790 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 10:06:20,806 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 10:11:20,823 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 10:16:20,840 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 10:21:20,857 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 10:26:20,874 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 10:31:20,891 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 10:36:20,908 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 10:48:03,527 WARN server beat out of date, current: {"adWeight":0,"alive":true,"ip":"10.45.148.239","key":"10.45.148.239:8848","lastRefTime":1555296483527,"lastRefTimeStr":"2019-04-15 10:48:03","servePort":8848,"site":"unknown","weight":2}, last: {"adWeight":0,"alive":false,"ip":"10.45.148.239","key":"10.45.148.239:8848","lastRefTime":1555295991289,"lastRefTimeStr":"2019-04-15 10:39:51","servePort":8848,"site":"unknown","weight":2}
+
+2019-04-15 10:48:08,253 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 10:53:08,269 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 10:58:08,286 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 11:03:08,303 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 11:08:08,319 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 11:24:56,819 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 11:24:56,819 WARN server beat out of date, current: {"adWeight":0,"alive":true,"ip":"10.45.148.239","key":"10.45.148.239:8848","lastRefTime":1555298696819,"lastRefTimeStr":"2019-04-15 11:24:56","servePort":8848,"site":"unknown","weight":2}, last: {"adWeight":0,"alive":false,"ip":"10.45.148.239","key":"10.45.148.239:8848","lastRefTime":1555297968680,"lastRefTimeStr":"2019-04-15 11:12:48","servePort":8848,"site":"unknown","weight":2}
+
+2019-04-15 11:29:56,836 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 11:34:56,852 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 11:39:56,869 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 11:44:56,886 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 11:49:56,903 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 11:54:56,920 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 11:59:56,937 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 12:04:56,954 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 12:09:56,971 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 12:14:56,988 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 12:19:57,005 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 12:24:57,022 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 12:29:57,038 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 12:34:57,055 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 12:39:57,072 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 12:44:57,089 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 12:49:57,106 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 12:54:57,123 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 12:59:57,140 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 13:04:57,157 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 13:09:57,174 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 13:14:57,191 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 13:19:57,208 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 13:24:57,224 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 13:29:57,241 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 13:34:57,258 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 13:39:57,275 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 13:44:57,292 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 13:49:57,309 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 13:54:57,325 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 13:59:57,342 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 14:04:57,359 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 14:09:57,376 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 14:14:57,393 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 14:19:57,410 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 14:24:57,427 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 14:29:57,444 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 14:34:57,461 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 14:39:57,478 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 14:44:57,506 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 14:49:57,523 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 14:54:57,540 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 14:59:57,556 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 15:04:57,573 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 15:09:57,590 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 15:14:57,607 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 15:19:57,624 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 15:24:57,641 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 15:29:57,658 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 15:34:57,675 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 15:39:57,692 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 15:44:57,709 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 15:49:57,726 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 15:54:57,743 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 15:59:57,760 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 16:04:57,777 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 16:09:57,794 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 16:14:57,811 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 16:19:57,828 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 16:24:57,845 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 16:29:57,862 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 16:34:57,879 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 16:39:57,896 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 16:44:57,913 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 16:49:57,930 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 16:54:57,947 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 16:59:57,964 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 17:04:57,981 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 17:09:57,998 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 17:14:58,015 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 17:19:58,032 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 17:24:58,049 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 17:28:48,098 WARN server beat out of date, current: {"adWeight":0,"alive":true,"ip":"10.45.148.239","key":"10.45.148.239:8848","lastRefTime":1555320528098,"lastRefTimeStr":"2019-04-15 17:28:48","servePort":8848,"site":"unknown","weight":2}, last: {"adWeight":0,"alive":false,"ip":"10.45.148.239","key":"10.45.148.239:8848","lastRefTime":1555320388452,"lastRefTimeStr":"2019-04-15 17:26:28","servePort":8848,"site":"unknown","weight":2}
+
+2019-04-15 17:29:58,065 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 17:34:58,081 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 17:39:58,098 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 17:44:58,115 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 17:49:58,132 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 17:54:58,149 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 17:59:58,166 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 18:04:58,182 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 18:09:58,199 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 18:14:58,216 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 18:19:58,233 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 18:24:58,250 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 18:29:58,267 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 18:34:58,284 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 18:39:58,300 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 18:44:58,317 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 18:49:58,349 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 18:54:58,366 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 18:59:58,383 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 19:04:58,400 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 19:09:58,416 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 19:14:58,433 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 19:19:58,450 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 19:24:58,467 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 19:29:58,484 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 19:34:58,501 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 19:39:58,518 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 19:44:58,535 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 19:49:58,552 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 19:54:58,569 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 20:01:21,539 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 20:01:27,734 WARN server beat out of date, current: {"adWeight":0,"alive":true,"ip":"10.45.148.239","key":"10.45.148.239:8848","lastRefTime":1555329681535,"lastRefTimeStr":"2019-04-15 20:01:21","servePort":8848,"site":"unknown","weight":2}, last: {"adWeight":0,"alive":false,"ip":"10.45.148.239","key":"10.45.148.239:8848","lastRefTime":1555329469023,"lastRefTimeStr":"2019-04-15 19:57:49","servePort":8848,"site":"unknown","weight":2}
+
+2019-04-15 20:06:21,556 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 20:11:21,573 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 20:16:21,604 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 20:21:21,621 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 20:26:21,638 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 20:27:56,001 WARN server beat out of date, current: {"adWeight":0,"alive":true,"ip":"10.45.148.239","key":"10.45.148.239:8848","lastRefTime":1555331276001,"lastRefTimeStr":"2019-04-15 20:27:56","servePort":8848,"site":"unknown","weight":2}, last: {"adWeight":0,"alive":false,"ip":"10.45.148.239","key":"10.45.148.239:8848","lastRefTime":1555331188487,"lastRefTimeStr":"2019-04-15 20:26:28","servePort":8848,"site":"unknown","weight":2}
+
+2019-04-15 20:31:21,654 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 20:36:21,682 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 20:41:21,699 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 20:46:21,716 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 20:51:21,732 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 20:55:33,527 WARN server beat out of date, current: {"adWeight":0,"alive":true,"ip":"10.45.148.239","key":"10.45.148.239:8848","lastRefTime":1555332933527,"lastRefTimeStr":"2019-04-15 20:55:33","servePort":8848,"site":"unknown","weight":2}, last: {"adWeight":0,"alive":false,"ip":"10.45.148.239","key":"10.45.148.239:8848","lastRefTime":1555332761366,"lastRefTimeStr":"2019-04-15 20:52:41","servePort":8848,"site":"unknown","weight":2}
+
+2019-04-15 20:56:21,753 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 21:01:21,770 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 21:06:21,787 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 21:11:21,804 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 21:16:21,821 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 21:22:21,530 WARN server beat out of date, current: {"adWeight":0,"alive":true,"ip":"10.45.148.239","key":"10.45.148.239:8848","lastRefTime":1555334541530,"lastRefTimeStr":"2019-04-15 21:22:21","servePort":8848,"site":"unknown","weight":2}, last: {"adWeight":0,"alive":false,"ip":"10.45.148.239","key":"10.45.148.239:8848","lastRefTime":1555334433834,"lastRefTimeStr":"2019-04-15 21:20:33","servePort":8848,"site":"unknown","weight":2}
+
+2019-04-15 21:22:21,532 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 21:27:21,555 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 21:32:21,571 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 21:37:21,588 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 21:42:21,617 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 21:47:21,633 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 21:52:21,650 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 21:57:21,667 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 22:02:21,683 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 22:07:21,700 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 22:12:21,728 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 22:14:50,341 WARN server beat out of date, current: {"adWeight":0,"alive":true,"ip":"10.45.148.239","key":"10.45.148.239:8848","lastRefTime":1555337685528,"lastRefTimeStr":"2019-04-15 22:14:45","servePort":8848,"site":"unknown","weight":2}, last: {"adWeight":0,"alive":false,"ip":"10.45.148.239","key":"10.45.148.239:8848","lastRefTime":1555337541857,"lastRefTimeStr":"2019-04-15 22:12:21","servePort":8848,"site":"unknown","weight":2}
+
+2019-04-15 22:17:21,744 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 22:22:21,769 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 22:27:21,786 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 22:32:21,803 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 22:37:21,830 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 22:42:21,847 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 22:47:21,864 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 22:55:34,513 WARN server beat out of date, current: {"adWeight":0,"alive":true,"ip":"10.45.148.239","key":"10.45.148.239:8848","lastRefTime":1555340134513,"lastRefTimeStr":"2019-04-15 22:55:34","servePort":8848,"site":"unknown","weight":2}, last: {"adWeight":0,"alive":false,"ip":"10.45.148.239","key":"10.45.148.239:8848","lastRefTime":1555339925724,"lastRefTimeStr":"2019-04-15 22:52:05","servePort":8848,"site":"unknown","weight":2}
+
+2019-04-15 22:55:34,523 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 23:00:34,540 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 23:05:34,557 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 23:10:34,582 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 23:15:34,599 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 23:22:55,533 WARN server beat out of date, current: {"adWeight":0,"alive":true,"ip":"10.45.148.239","key":"10.45.148.239:8848","lastRefTime":1555341775533,"lastRefTimeStr":"2019-04-15 23:22:55","servePort":8848,"site":"unknown","weight":2}, last: {"adWeight":0,"alive":false,"ip":"10.45.148.239","key":"10.45.148.239:8848","lastRefTime":1555341619745,"lastRefTimeStr":"2019-04-15 23:20:19","servePort":8848,"site":"unknown","weight":2}
+
+2019-04-15 23:22:55,539 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 23:27:55,556 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 23:32:55,572 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 23:37:55,589 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 23:42:55,606 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 23:49:31,532 WARN server beat out of date, current: {"adWeight":0,"alive":true,"ip":"10.45.148.239","key":"10.45.148.239:8848","lastRefTime":1555343371532,"lastRefTimeStr":"2019-04-15 23:49:31","servePort":8848,"site":"unknown","weight":2}, last: {"adWeight":0,"alive":false,"ip":"10.45.148.239","key":"10.45.148.239:8848","lastRefTime":1555343260641,"lastRefTimeStr":"2019-04-15 23:47:40","servePort":8848,"site":"unknown","weight":2}
+
+2019-04-15 23:49:31,533 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 23:54:31,550 INFO [HEALTH-CHECK] health check is true
+
+2019-04-15 23:59:31,567 INFO [HEALTH-CHECK] health check is true
+

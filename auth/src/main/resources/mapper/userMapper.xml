@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.znv.dao.mapper.UserServiceMapper">
+    <!--通过<resultMap>映射实体类属性名和表的字段名对应关系 -->
+    <resultMap type="com.znv.bean.User" id="userMap">
+        <id property="userId" column="user_id" />
+        <result property="userName" column="user_name" />
+        <result property="password" column="password" />
+        <result property="usergroupId" column="usergroup_id" />
+        <result property="userType" column="user_type" />
+        <result property="employeeId" column="employee_id" />
+        <result property="trueName" column="true_name" />
+        <result property="mobilePhone" column="mobile_phone" />
+        <result property="email" column="e_mail" />
+        <result property="phone" column="phone" />
+        <result property="address" column="address" />
+        <result property="userState" column="user_state" />
+        <result property="errLoginTimes" column="err_login_times" />
+        <result property="updateTime" column="updatetime" />
+        <result property="description" column="description" />
+        <result property="adminUser" column="admin_user" />
+        <result property="fax" column="fax" />
+        <result property="gender" column="gender" />
+        <result property="userLevel" column="user_level" />
+        <result property="loginClientType" column="login_client_type" />
+        <result property="userImg" column="user_img" />
+        <result property="userUrl" column="user_url" />
+        <result property="systemFlag" column="system_flag" />
+        <result property="createTime" column="create_time" />
+        <result property="usergroupName" column="usergroup_name"/>
+        <collection property="roles" ofType="com.znv.bean.Role" column="user_id"
+                     select="getRoles"></collection>
+        <collection property="usergroupRoles" ofType="com.znv.bean.Role" column="usergroup_id"
+                    select="getUgRoles"></collection>
+        <collection property="modules" ofType="com.znv.bean.Module" column="user_id"
+                    select="getModules"></collection>
+    </resultMap>
+    <!-- start 关联查询 role-->
+    <resultMap type="com.znv.bean.Role" id="roleMap">
+        <result property="roleId" column="role_id" />
+        <result property="roleName" column="role_name" />
+        <result property="upRoleId" column="up_role_id" />
+        <result property="description" column="description" />
+    </resultMap>
+
+    <select id="getRoles" resultMap="roleMap" parameterType="long">
+      SELECT * FROM t_cfg_role r join t_link_user_role ur
+       on r.role_id = ur.role_id
+       WHERE ur.user_id = #{user_id}
+    </select>
+
+    <select id="getUgRoles" resultMap="roleMap" parameterType="long">
+        SELECT * FROM t_cfg_role r join t_link_usergroup_role ur
+        on r.role_id = ur.role_id
+        WHERE ur.usergroup_id = #{usergroup_id}
+    </select>
+
+
+    <!-- end 关联查询 role-->
+
+    <!-- start 关联查询 module-->
+    <select id="getModules" resultMap="moduleMap" parameterType="long">
+     <!--   select * from t_cfg_module where id in(
+        select module_id from t_link_privilege_module where privilege_id in(
+        select privilege_id from t_link_role_privilege where role_id in
+        (
+        select role_id from t_link_user_role where user_id = #{user_id}
+        union
+        select role_id from t_link_usergroup_role where usergroup_id in (select usergroup_id from t_cfg_user where user_id = #{user_id})
+        )
+        )
+        )-->
+
+        select * from t_cfg_module m join t_link_privilege_module pm on m.id = pm.module_id where pm.privilege_id in
+	(select p.privilege_id from t_cfg_privilege p join t_link_role_privilege rp on p.privilege_id = rp.privilege_id
+		where rp.role_id in (
+			select r.role_id from t_cfg_role r join t_link_user_role ur on r.role_id = ur.role_id where ur.user_id = #{user_id}
+			union
+			select r1.role_id from t_cfg_role r1 join t_link_usergroup_role ugr on r1.role_id = ugr.role_id where ugr.usergroup_id = (select usergroup_id from t_cfg_user where user_id = #{user_id})
+		)
+	)
+    </select>
+    <!-- end 关联查询 module-->
+
+    <select id="queryUsers" resultType="map" resultMap="userMap">
+        SELECT u.*, ug.usergroup_name FROM t_cfg_user u LEFT JOIN t_cfg_usergroup ug
+        on u.usergroup_id = ug.usergroup_id
+        WHERE
+        <if test="userIds != null">u.user_id in (${userIds}) AND </if>
+        <if test="userName != null">u.user_name = #{userName} AND </if>
+        <if test="password != null">u.password = #{password} AND </if>
+        <if test="usergroupId != null">u.usergroup_id = #{usergroupId} AND </if>
+        <if test="userType != null">u.user_type = #{userType} AND </if>
+        <if test="employeeId != null">u.employee_id = #{employeeId} AND </if>
+        <if test="trueName != null">u.true_name = #{trueName} AND </if>
+        <if test="mobilePhone != null">u.mobile_phone = #{mobilePhone} AND </if>
+        <if test="email != null">u.e_mail = #{email} AND </if>
+        <if test="phone != null">u.phone = #{phone} AND </if>
+        <if test="address != null">u.address = #{address} AND </if>
+        <if test="userState != null">u.user_state = #{userState} AND </if>
+        <if test="errLoginTimes != null">u.err_login_times = #{errLoginTimes} AND </if>
+        <if test="updateTime != null">u.updatetime = #{updateTime} AND </if>
+        <if test="description != null">u.description = #{description} AND </if>
+        <if test="adminUser != null">u.admin_user = #{adminUser} AND </if>
+        <if test="fax != null">u.fax = #{fax} AND </if>
+        <if test="gender != null">u.gender = #{gender} AND </if>
+        <if test="userLevel != null">u.user_level = #{userLevel} AND </if>
+        <if test="loginClientType != null">u.login_client_type = #{loginClientType} AND </if>
+        <if test="userUrl != null">u.user_url = #{userUrl} AND </if>
+        <if test="systemFlag != null">u.system_flag = #{systemFlag} AND </if>
+        <if test="createTime != null">u.create_time = #{createTime} AND </if>
+        1=1;
+    </select>
+
+    <insert id="insertUser" parameterType="com.znv.bean.User" useGeneratedKeys="true"
+         keyProperty="userId" keyColumn="user_id">
+        INSERT INTO t_cfg_user (user_name, password, usergroup_id, user_type, employee_id,
+        true_name, mobile_phone, e_mail, phone, address, user_state,err_login_times, updatetime, description,
+        admin_user, fax, gender, user_level, login_client_type, user_url, system_flag)
+        VALUES (
+        #{userName, jdbcType=VARCHAR},
+        #{password, jdbcType=VARCHAR},
+        #{usergroupId, jdbcType=BIGINT},
+        #{userType, jdbcType=INTEGER},
+        #{employeeId, jdbcType=VARCHAR},
+        #{trueName, jdbcType=VARCHAR},
+        #{mobilePhone, jdbcType=VARCHAR},
+        #{email, jdbcType=VARCHAR},
+        #{phone, jdbcType=VARCHAR},
+        #{address, jdbcType=VARCHAR},
+        #{userState, jdbcType=INTEGER},
+        #{errLoginTimes, jdbcType=INTEGER},
+        #{updateTime, jdbcType=DATE},
+        #{description, jdbcType=VARCHAR},
+        #{adminUser, jdbcType=VARCHAR},
+        #{fax, jdbcType=VARCHAR},
+        #{gender, jdbcType=INTEGER},
+        #{userLevel, jdbcType=INTEGER},
+        #{loginClientType, jdbcType=INTEGER},
+        #{userUrl, jdbcType=VARCHAR},
+        #{systemFlag, jdbcType=INTEGER}
+        )
+    </insert>
+
+    <update id="updateUser" parameterType="map" useGeneratedKeys="false">
+        UPDATE t_cfg_user
+        <set>
+            <if test="userName !=null">user_name = #{userName, jdbcType=VARCHAR}, </if>
+            <if test="password !=null">password = #{password, jdbcType=VARCHAR}, </if>
+            <if test="usergroupId !=null">usergroup_id = #{usergroupId, jdbcType=BIGINT}, </if>
+            <if test="userType !=null">user_type = #{userType, jdbcType=INTEGER}, </if>
+            <if test="employeeId !=null">employee_id = #{employeeId, jdbcType=VARCHAR}, </if>
+            <if test="trueName !=null">true_name = #{trueName, jdbcType=VARCHAR}, </if>
+            <if test="mobilePhone !=null">mobile_phone = #{mobilePhone, jdbcType=VARCHAR}, </if>
+            <if test="email !=null">e_mail = #{email, jdbcType=VARCHAR}, </if>
+            <if test="phone !=null">phone = #{phone, jdbcType=VARCHAR}, </if>
+            <if test="address !=null">address = #{address, jdbcType=VARCHAR}, </if>
+            <if test="userState !=null">user_state = #{userState, jdbcType=INTEGER}, </if>
+            <if test="errLoginTimes !=null">err_login_times = #{errLoginTimes, jdbcType=INTEGER}, </if>
+            <if test="updateTime !=null">updatetime = #{updateTime, jdbcType=DATE}, </if>
+            <if test="description !=null">description = #{description, jdbcType=VARCHAR}, </if>
+            <if test="adminUser !=null">admin_user = #{adminUser, jdbcType=VARCHAR}, </if>
+            <if test="fax !=null">fax = #{fax, jdbcType=VARCHAR}, </if>
+            <if test="gender !=null">gender = #{gender, jdbcType=INTEGER}, </if>
+            <if test="userLevel !=null">user_level = #{userLevel, jdbcType=INTEGER}, </if>
+            <if test="loginClientType !=null">login_client_type = #{loginClientType, jdbcType=INTEGER}, </if>
+            <if test="userUrl !=null">user_url = #{userUrl, jdbcType=VARCHAR}, </if>
+            <if test="systemFlag !=null">system_flag = #{systemFlag, jdbcType=INTEGER}, </if>
+        </set>
+        WHERE user_id = #{userId};
+    </update>
+    <delete id="deleteUsers" parameterType="map">
+        DELETE FROM t_cfg_user
+        WHERE
+        <if test="userIds != null">user_id in (${userIds}) AND </if>
+        <if test="userName != null">user_name = #{userName} AND </if>
+        <if test="password !=null">password = #{password} AND </if>
+        <if test="usergroupId !=null">usergroup_id = #{usergroupId} AND </if>
+        <if test="userType !=null">user_type = #{userType} AND </if>
+        <if test="employeeId !=null">employee_id = #{employeeId} AND </if>
+        <if test="trueName !=null">true_name = #{trueName} AND </if>
+        <if test="mobilePhone !=null">mobile_phone = #{mobilePhone} AND </if>
+        <if test="email !=null">e_mail = #{email} AND </if>
+        <if test="phone !=null">phone = #{phone} AND </if>
+        <if test="address !=null">address = #{address} AND </if>
+        <if test="userState !=null">user_state = #{userState} AND </if>
+        <if test="errLoginTimes !=null">err_login_times = #{errLoginTimes} AND </if>
+        <if test="updateTime !=null">updatetime = #{updateTime} AND </if>
+        <if test="description !=null">description = #{description} AND </if>
+        <if test="adminUser !=null">admin_user = #{adminUser} AND </if>
+        <if test="fax !=null">fax = #{fax} AND </if>
+        <if test="gender !=null">gender = #{gender} AND </if>
+        <if test="userLevel !=null">user_level = #{userLevel} AND </if>
+        <if test="loginClientType !=null">login_client_type = #{loginClientType} AND </if>
+        <if test="userUrl !=null">user_url = #{userUrl} AND </if>
+        <if test="systemFlag !=null">system_flag = #{systemFlag} AND </if>
+        <if test="createTime !=null">create_time = #{createTime} AND </if>
+        1=1;
+    </delete>
+
+    <!-- start user module -->
+    <resultMap type="com.znv.bean.Module" id="moduleMap">
+        <id property="id" column="id" />
+        <result property="moduleName" column="module_name" />
+        <result property="moduleUrl" column="module_url" />
+        <result property="description" column="description" />
+        <result property="upModuleId" column="up_module_id" />
+    </resultMap>
+
+    <select id="queryRelatedModules" parameterType="map" resultType="java.util.HashMap"
+        statementType="CALLABLE" useCache="false" resultMap="moduleMap">
+        <![CDATA[
+            call up_query_usermodulesbyuserid(#{userId,mode=IN,jdbcType=BIGINT});
+        ]]>
+    </select>
+    <!-- end user module -->
+
+    <!-- start user role operation -->
+    <insert id="addUserRoles" parameterType="map">
+        INSERT INTO t_link_user_role (user_id, role_id) VALUES
+        <foreach collection="roleIds" item="item" separator=",">
+            (
+            #{userId, jdbcType=VARCHAR},
+            #{item, jdbcType=VARCHAR}
+            )
+        </foreach>
+    </insert>
+
+    <delete id="removeUserRoles" parameterType="map">
+        DELETE FROM t_link_user_role
+          WHERE
+        <if test="userId!=null">user_id = #{userId} AND </if>
+        <if test="roleIds!=null">role_id in (${roleIds}) AND</if>
+        1=1;
+    </delete>
+
+    <select id="queryUserRoles" parameterType="map" resultType="com.znv.bean.Role" resultMap="roleMap">
+        SELECT * FROM t_cfg_role r JOIN t_link_user_role ur on r.role_id = ur.role_id
+        WHERE user_id = #{userId}
+        UNION
+        SELECT * FROM t_cfg_role r1 JOIN t_link_usergroup_role ugr on r1.role_id = ugr.role_id
+        WHERE usergroup_id in (SELECT u.usergroup_id from t_cfg_user u WHERE u.user_id = #{userId})
+    </select>
+    <!-- end user role operation -->
+
+    <select id="changePassword">
+        UPDATE t_cfg_user t
+        SET t.password = #{newPassword}
+        WHERE user_name = #{userName};
+    </select>
+</mapper>

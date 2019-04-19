@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.znv.dao.mapper.RolePrivilegeServiceMapper">
+    <!--通过<resultMap>映射实体类属性名和表的字段名对应关系 -->
+    <resultMap type="java.util.HashMap" id="rolePrivilegeMap">
+        <result property="id" column="id" />
+        <result property="roleId" column="role_id" />
+        <result property="privilegeId" column="privilege_id" />
+    </resultMap>
+
+    <select id="queryRolePrivileges" resultType="java.util.HashMap" resultMap="rolePrivilegeMap">
+        SELECT * FROM t_link_role_privilege
+        WHERE
+        <if test="ids != null">id in (${ids}) AND </if>
+        <if test="roleId != null">role_id = #{roleId} AND </if>
+        <if test="privilegeId != null">privilege_id = #{privilegeId} AND </if>
+        1=1;
+    </select>
+
+    <insert id="insertRolePrivileges" parameterType="map" useGeneratedKeys="false">
+        INSERT INTO t_link_role_privilege (role_id, privilege_id)
+        VALUES
+        <foreach collection="privilegeIds" item="item" separator=",">
+            (
+            #{roleId, jdbcType=BIGINT},
+            #{item, jdbcType=BIGINT}
+            )
+        </foreach>
+    </insert>
+
+    <update id="updateRolePrivilege" parameterType="map" useGeneratedKeys="false">
+        UPDATE t_link_role_privilege SET
+        role_id = #{roleId, jdbcType=BIGINT},
+        privilege_id = #{privilegeId, jdbcType=BIGINT}
+        WHERE id = #{id};
+    </update>
+
+    <delete id="deleteRolePrivileges" parameterType="map">
+        DELETE FROM t_link_role_privilege
+        WHERE
+        <if test="ids != null">id in (${ids}) AND </if>
+        <if test="roleId != null">role_id = #{roleId} AND </if>
+        <if test="privilegeIds != null">privilege_id in (${privilegeIds}) AND </if>
+        1=1;
+    </delete>
+</mapper>

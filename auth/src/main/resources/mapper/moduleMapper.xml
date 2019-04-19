@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.znv.dao.mapper.ModuleServiceMapper">
+    <!--通过<resultMap>映射实体类属性名和表的字段名对应关系 -->
+    <resultMap type="com.znv.bean.Module" id="moduleMap">
+        <id property="id" column="id" />
+        <result property="moduleName" column="module_name" />
+        <result property="moduleUrl" column="module_url" />
+        <result property="description" column="description" />
+        <result property="upModuleId" column="up_module_id" />
+    </resultMap>
+
+    <select id="queryModules" resultType="map" resultMap="moduleMap">
+        SELECT * FROM t_cfg_module
+        WHERE
+        <if test="id != null">id=#{id} AND </if>
+        <if test="moduleName != null">module_name = #{moduleName} AND </if>
+        <if test="moduleUrl != null">module_url = #{moduleUrl} AND </if>
+        <if test="description != null">description = #{description} AND </if>
+        <if test="upModuleId != null">up_module_id = #{upModuleId} AND </if>
+        1=1;
+    </select>
+
+    <insert id="insertModule" parameterType="map" useGeneratedKeys="false">
+      INSERT INTO t_cfg_module (module_name, module_url, description, up_module_id)
+        VALUES (
+        #{moduleName, jdbcType=VARCHAR},
+        #{moduleUrl, jdbcType=VARCHAR},
+        #{description, jdbcType=VARCHAR},
+        #{upModuleId, jdbcType=BIGINT}
+        )
+    </insert>
+
+    <update id="updateModule" parameterType="map" useGeneratedKeys="false">
+        UPDATE t_cfg_module SET
+          module_name = #{moduleName, jdbcType=VARCHAR},
+          module_url = #{moduleUrl, jdbcType=VARCHAR},
+          description = #{description, jdbcType=VARCHAR},
+          up_module_id = #{upModuleId, jdbcType=BIGINT}
+        WHERE id = #{id};
+    </update>
+    <delete id="deleteModule" parameterType="map">
+        DELETE FROM t_cfg_module
+          WHERE
+        <if test="id != null">id in (${id}) AND </if>
+        <if test="moduleName != null">module_name = #{moduleName} AND </if>
+        <if test="moduleUrl != null">module_url = #{moduleUrl} AND </if>
+        <if test="description != null">description = #{description} AND </if>
+        <if test="upModuleId != null">up_module_id = #{upModuleId} AND </if>
+        1=1;
+    </delete>
+</mapper>

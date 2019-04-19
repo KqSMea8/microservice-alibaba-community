@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.znv.dao.mapper.RoleServiceMapper">
+    <!--通过<resultMap>映射实体类属性名和表的字段名对应关系 -->
+    <resultMap type="com.znv.bean.Role" id="roleMap">
+        <result property="roleId" column="role_id" />
+        <result property="roleName" column="role_name" />
+        <result property="upRoleId" column="up_role_id" />
+        <result property="description" column="description" />
+        <collection property="privileges" ofType="com.znv.bean.Privilege"
+                    column="role_id" select="getPrivileges">
+        </collection>
+    </resultMap>
+
+    <resultMap type="com.znv.bean.Privilege" id="privilegeMap">
+        <result property="privilegeId" column="privilege_id" />
+        <result property="privilegeName" column="privilege_name" />
+        <result property="privilegeType" column="privilege_type" />
+        <result property="description" column="description" />
+        <result property="upPrivilegeId" column="up_privilege_id" />
+    </resultMap>
+
+    <select id="getPrivileges" parameterType="long"
+            resultType="com.znv.bean.Privilege" resultMap="privilegeMap">
+        SELECT * FROM t_cfg_privilege p JOIN t_link_role_privilege rp
+        on p.privilege_id = rp.privilege_id
+        WHERE rp.role_id = #{role_id};
+    </select>
+
+    <select id="queryRoles" resultType="com.znv.bean.Role" resultMap="roleMap">
+        SELECT * FROM t_cfg_role
+        WHERE
+        <if test="roleIds != null">role_id in (${roleIds}) AND </if>
+        <if test="roleName != null">role_name = #{roleName} AND </if>
+        <if test="upRoleId != null">up_role_id = #{upRoleId} AND </if>
+        <if test="description != null">description = #{description} AND </if>
+        1=1;
+    </select>
+
+    <insert id="insertRole" parameterType="com.znv.bean.Role" useGeneratedKeys="true"
+            keyColumn="role_id" keyProperty="roleId">
+
+        INSERT INTO t_cfg_role (role_name, up_role_id, description)
+        VALUES (
+        #{roleName, jdbcType=VARCHAR},
+        #{upRoleId, jdbcType=BIGINT},
+        #{description, jdbcType=VARCHAR}
+        );
+    </insert>
+
+    <update id="updateRole" parameterType="map" useGeneratedKeys="false">
+        UPDATE t_cfg_role SET
+        role_name = #{roleName, jdbcType=VARCHAR},
+        up_role_id = #{upRoleId, jdbcType=BIGINT},
+        description = #{description, jdbcType=VARCHAR}
+        WHERE role_id = #{roleId};
+    </update>
+
+    <delete id="deleteRoles" parameterType="map">
+        DELETE FROM t_cfg_role
+        WHERE
+        <if test="roleIds != null">role_id in (${roleIds}) AND </if>
+        <if test="roleName != null">role_name = #{roleName} AND </if>
+        <if test="upRoleId != null">up_role_id = #{upRoleId} AND </if>
+        <if test="description != null">description = #{description} AND </if>
+        1=1;
+    </delete>
+</mapper>

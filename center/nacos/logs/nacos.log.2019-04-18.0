@@ -1,0 +1,1175 @@
+2019-04-18 00:01:07,607 WARN clearConfigHistory start
+
+2019-04-18 00:01:07,914 INFO [capacityManagement] start correct usage
+
+2019-04-18 00:01:07,922 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 00:11:07,639 WARN clearConfigHistory start
+
+2019-04-18 00:11:07,943 INFO [capacityManagement] start correct usage
+
+2019-04-18 00:11:07,960 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 00:21:07,680 WARN clearConfigHistory start
+
+2019-04-18 00:21:07,984 INFO [capacityManagement] start correct usage
+
+2019-04-18 00:21:07,997 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 00:31:07,708 WARN clearConfigHistory start
+
+2019-04-18 00:31:08,020 INFO [capacityManagement] start correct usage
+
+2019-04-18 00:31:08,041 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 00:41:07,736 WARN clearConfigHistory start
+
+2019-04-18 00:41:08,064 INFO [capacityManagement] start correct usage
+
+2019-04-18 00:41:08,072 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 00:51:07,763 WARN clearConfigHistory start
+
+2019-04-18 00:51:08,095 INFO [capacityManagement] start correct usage
+
+2019-04-18 00:51:08,101 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 01:02:07,502 INFO [capacityManagement] start correct usage
+
+2019-04-18 01:02:07,537 WARN clearConfigHistory start
+
+2019-04-18 01:02:12,022 ERROR clearConfigHistory error
+
+org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:81)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:612)
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:669)
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:700)
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:712)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:783)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:809)
+	at com.alibaba.nacos.config.server.service.PersistService.findConfigHistoryCountByTime(PersistService.java:884)
+	at com.alibaba.nacos.config.server.service.PersistService$$FastClassBySpringCGLIB$$21ae4232.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at com.alibaba.nacos.config.server.service.PersistService$$EnhancerBySpringCGLIB$$23dd4dc0.findConfigHistoryCountByTime(<generated>)
+	at com.alibaba.nacos.config.server.service.dump.DumpService$3.run(DumpService.java:104)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:377)
+	at com.mysql.jdbc.Util.getInstance(Util.java:360)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:956)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:935)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:924)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:870)
+	at com.mysql.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:2144)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2069)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:790)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:44)
+	at sun.reflect.GeneratedConstructorAccessor83.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:377)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:395)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:325)
+	at org.apache.commons.dbcp.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:38)
+	at org.apache.commons.dbcp.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:582)
+	at org.apache.commons.pool.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:1188)
+	at org.apache.commons.dbcp.PoolingDataSource.getConnection(PoolingDataSource.java:106)
+	at org.apache.commons.dbcp.BasicDataSource.getConnection(BasicDataSource.java:1044)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:151)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:115)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:78)
+	... 23 common frames omitted
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.GeneratedConstructorAccessor84.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:377)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1036)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:338)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2232)
+	at com.mysql.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:2085)
+	... 40 common frames omitted
+Caused by: java.net.NoRouteToHostException: No route to host: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:213)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:297)
+	... 42 common frames omitted
+2019-04-18 01:02:12,464 INFO [capacityManagement] end correct usage, cost: 4s
+
+2019-04-18 01:12:12,045 WARN clearConfigHistory start
+
+2019-04-18 01:12:12,487 INFO [capacityManagement] start correct usage
+
+2019-04-18 01:12:12,492 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 01:22:12,073 WARN clearConfigHistory start
+
+2019-04-18 01:22:12,515 INFO [capacityManagement] start correct usage
+
+2019-04-18 01:22:12,522 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 01:32:12,102 WARN clearConfigHistory start
+
+2019-04-18 01:32:12,545 INFO [capacityManagement] start correct usage
+
+2019-04-18 01:32:12,550 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 01:42:12,129 WARN clearConfigHistory start
+
+2019-04-18 01:42:12,573 INFO [capacityManagement] start correct usage
+
+2019-04-18 01:42:12,579 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 01:52:12,157 WARN clearConfigHistory start
+
+2019-04-18 01:52:12,603 INFO [capacityManagement] start correct usage
+
+2019-04-18 01:52:12,611 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 02:02:12,183 WARN clearConfigHistory start
+
+2019-04-18 02:02:12,634 INFO [capacityManagement] start correct usage
+
+2019-04-18 02:02:12,640 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 02:12:12,211 WARN clearConfigHistory start
+
+2019-04-18 02:12:12,663 INFO [capacityManagement] start correct usage
+
+2019-04-18 02:12:12,669 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 02:23:41,502 INFO [capacityManagement] start correct usage
+
+2019-04-18 02:23:41,520 WARN clearConfigHistory start
+
+2019-04-18 02:23:46,445 INFO [capacityManagement] end correct usage, cost: 4s
+
+2019-04-18 02:33:46,466 WARN clearConfigHistory start
+
+2019-04-18 02:33:46,745 INFO [capacityManagement] start correct usage
+
+2019-04-18 02:33:46,751 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 02:43:46,493 WARN clearConfigHistory start
+
+2019-04-18 02:43:46,774 INFO [capacityManagement] start correct usage
+
+2019-04-18 02:43:46,779 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 02:53:46,524 WARN clearConfigHistory start
+
+2019-04-18 02:53:46,801 INFO [capacityManagement] start correct usage
+
+2019-04-18 02:53:46,810 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 03:03:46,551 WARN clearConfigHistory start
+
+2019-04-18 03:03:46,833 INFO [capacityManagement] start correct usage
+
+2019-04-18 03:03:46,839 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 03:13:46,578 WARN clearConfigHistory start
+
+2019-04-18 03:13:46,862 INFO [capacityManagement] start correct usage
+
+2019-04-18 03:13:46,866 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 03:23:46,602 WARN clearConfigHistory start
+
+2019-04-18 03:23:46,888 INFO [capacityManagement] start correct usage
+
+2019-04-18 03:23:46,895 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 03:33:46,629 WARN clearConfigHistory start
+
+2019-04-18 03:33:46,918 INFO [capacityManagement] start correct usage
+
+2019-04-18 03:33:46,924 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 03:43:46,657 WARN clearConfigHistory start
+
+2019-04-18 03:43:46,948 INFO [capacityManagement] start correct usage
+
+2019-04-18 03:43:46,955 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 03:53:46,683 WARN clearConfigHistory start
+
+2019-04-18 03:53:46,978 INFO [capacityManagement] start correct usage
+
+2019-04-18 03:53:46,984 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 04:03:46,709 WARN clearConfigHistory start
+
+2019-04-18 04:03:47,007 INFO [capacityManagement] start correct usage
+
+2019-04-18 04:03:47,012 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 04:13:46,734 WARN clearConfigHistory start
+
+2019-04-18 04:13:47,035 INFO [capacityManagement] start correct usage
+
+2019-04-18 04:13:47,039 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 04:23:46,760 WARN clearConfigHistory start
+
+2019-04-18 04:23:47,063 INFO [capacityManagement] start correct usage
+
+2019-04-18 04:23:47,069 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 04:33:46,786 WARN clearConfigHistory start
+
+2019-04-18 04:33:47,093 INFO [capacityManagement] start correct usage
+
+2019-04-18 04:33:47,098 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 04:43:46,812 WARN clearConfigHistory start
+
+2019-04-18 04:43:47,121 INFO [capacityManagement] start correct usage
+
+2019-04-18 04:43:47,127 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 04:53:46,838 WARN clearConfigHistory start
+
+2019-04-18 04:53:47,151 INFO [capacityManagement] start correct usage
+
+2019-04-18 04:53:47,160 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 05:03:46,864 WARN clearConfigHistory start
+
+2019-04-18 05:03:47,183 INFO [capacityManagement] start correct usage
+
+2019-04-18 05:03:47,189 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 05:13:46,892 WARN clearConfigHistory start
+
+2019-04-18 05:13:47,212 INFO [capacityManagement] start correct usage
+
+2019-04-18 05:13:47,223 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 05:23:46,919 WARN clearConfigHistory start
+
+2019-04-18 05:23:47,246 INFO [capacityManagement] start correct usage
+
+2019-04-18 05:23:47,255 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 05:33:46,948 WARN clearConfigHistory start
+
+2019-04-18 05:33:47,278 INFO [capacityManagement] start correct usage
+
+2019-04-18 05:33:47,285 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 05:43:46,978 WARN clearConfigHistory start
+
+2019-04-18 05:43:47,309 INFO [capacityManagement] start correct usage
+
+2019-04-18 05:43:47,314 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 05:53:47,006 WARN clearConfigHistory start
+
+2019-04-18 05:53:47,337 INFO [capacityManagement] start correct usage
+
+2019-04-18 05:53:47,346 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 06:03:47,034 WARN clearConfigHistory start
+
+2019-04-18 06:03:47,369 INFO [capacityManagement] start correct usage
+
+2019-04-18 06:03:47,377 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 06:13:47,060 WARN clearConfigHistory start
+
+2019-04-18 06:13:47,400 INFO [capacityManagement] start correct usage
+
+2019-04-18 06:13:47,406 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 06:23:47,091 WARN clearConfigHistory start
+
+2019-04-18 06:23:47,429 INFO [capacityManagement] start correct usage
+
+2019-04-18 06:23:47,437 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 06:33:47,121 WARN clearConfigHistory start
+
+2019-04-18 06:33:47,460 INFO [capacityManagement] start correct usage
+
+2019-04-18 06:33:47,468 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 06:43:47,152 WARN clearConfigHistory start
+
+2019-04-18 06:43:47,491 INFO [capacityManagement] start correct usage
+
+2019-04-18 06:43:47,499 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 06:53:47,185 WARN clearConfigHistory start
+
+2019-04-18 06:53:47,522 INFO [capacityManagement] start correct usage
+
+2019-04-18 06:53:47,528 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 07:03:47,219 WARN clearConfigHistory start
+
+2019-04-18 07:03:47,551 INFO [capacityManagement] start correct usage
+
+2019-04-18 07:03:47,557 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 07:13:47,247 WARN clearConfigHistory start
+
+2019-04-18 07:13:47,581 INFO [capacityManagement] start correct usage
+
+2019-04-18 07:13:47,587 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 07:23:47,273 WARN clearConfigHistory start
+
+2019-04-18 07:23:47,610 INFO [capacityManagement] start correct usage
+
+2019-04-18 07:23:47,616 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 07:33:47,299 WARN clearConfigHistory start
+
+2019-04-18 07:33:47,639 INFO [capacityManagement] start correct usage
+
+2019-04-18 07:33:47,647 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 07:43:47,336 WARN clearConfigHistory start
+
+2019-04-18 07:43:47,671 INFO [capacityManagement] start correct usage
+
+2019-04-18 07:43:47,677 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 07:53:47,370 WARN clearConfigHistory start
+
+2019-04-18 07:53:47,700 INFO [capacityManagement] start correct usage
+
+2019-04-18 07:53:47,706 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 08:03:47,398 WARN clearConfigHistory start
+
+2019-04-18 08:03:47,730 INFO [capacityManagement] start correct usage
+
+2019-04-18 08:03:47,753 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 08:13:47,431 WARN clearConfigHistory start
+
+2019-04-18 08:13:47,776 INFO [capacityManagement] start correct usage
+
+2019-04-18 08:13:47,782 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 08:23:47,459 WARN clearConfigHistory start
+
+2019-04-18 08:23:47,806 INFO [capacityManagement] start correct usage
+
+2019-04-18 08:23:47,812 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 08:33:47,492 WARN clearConfigHistory start
+
+2019-04-18 08:33:47,835 INFO [capacityManagement] start correct usage
+
+2019-04-18 08:33:47,842 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 08:43:47,525 WARN clearConfigHistory start
+
+2019-04-18 08:43:47,865 INFO [capacityManagement] start correct usage
+
+2019-04-18 08:43:47,888 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 08:53:47,553 WARN clearConfigHistory start
+
+2019-04-18 08:53:47,912 INFO [capacityManagement] start correct usage
+
+2019-04-18 08:53:47,918 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 08:58:02,789 INFO Expired JWT token.
+
+2019-04-18 08:58:02,789 ERROR Responding with unauthorized error. Message - Full authentication is required to access this resource
+
+2019-04-18 09:03:47,585 WARN clearConfigHistory start
+
+2019-04-18 09:03:47,941 INFO [capacityManagement] start correct usage
+
+2019-04-18 09:03:47,960 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 09:13:47,196 WARN clearConfigHistory start
+
+2019-04-18 09:13:47,564 INFO [capacityManagement] start correct usage
+
+2019-04-18 09:13:47,585 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 09:23:47,146 WARN clearConfigHistory start
+
+2019-04-18 09:23:47,528 INFO [capacityManagement] start correct usage
+
+2019-04-18 09:23:47,545 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 09:33:47,172 WARN clearConfigHistory start
+
+2019-04-18 09:33:47,568 INFO [capacityManagement] start correct usage
+
+2019-04-18 09:33:47,580 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 09:43:47,207 WARN clearConfigHistory start
+
+2019-04-18 09:43:47,603 INFO [capacityManagement] start correct usage
+
+2019-04-18 09:43:47,616 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 09:53:47,240 WARN clearConfigHistory start
+
+2019-04-18 09:53:47,639 INFO [capacityManagement] start correct usage
+
+2019-04-18 09:53:47,645 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 10:03:47,271 WARN clearConfigHistory start
+
+2019-04-18 10:03:47,668 INFO [capacityManagement] start correct usage
+
+2019-04-18 10:03:47,687 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 10:13:47,296 WARN clearConfigHistory start
+
+2019-04-18 10:13:47,710 INFO [capacityManagement] start correct usage
+
+2019-04-18 10:13:47,729 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 10:23:47,328 WARN clearConfigHistory start
+
+2019-04-18 10:23:47,752 INFO [capacityManagement] start correct usage
+
+2019-04-18 10:23:47,756 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 10:33:47,362 WARN clearConfigHistory start
+
+2019-04-18 10:33:47,780 INFO [capacityManagement] start correct usage
+
+2019-04-18 10:33:47,807 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 10:43:47,400 WARN clearConfigHistory start
+
+2019-04-18 10:43:47,830 INFO [capacityManagement] start correct usage
+
+2019-04-18 10:43:47,843 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 10:53:47,431 WARN clearConfigHistory start
+
+2019-04-18 10:53:47,866 INFO [capacityManagement] start correct usage
+
+2019-04-18 10:53:47,886 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 11:03:47,480 WARN clearConfigHistory start
+
+2019-04-18 11:03:47,916 INFO [capacityManagement] start correct usage
+
+2019-04-18 11:03:47,922 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 11:13:47,505 WARN clearConfigHistory start
+
+2019-04-18 11:13:47,945 INFO [capacityManagement] start correct usage
+
+2019-04-18 11:13:47,951 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 11:23:47,530 WARN clearConfigHistory start
+
+2019-04-18 11:23:47,974 INFO [capacityManagement] start correct usage
+
+2019-04-18 11:23:47,997 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 11:33:47,556 WARN clearConfigHistory start
+
+2019-04-18 11:33:48,021 INFO [capacityManagement] start correct usage
+
+2019-04-18 11:33:48,027 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 11:35:22,101 INFO Expired JWT token.
+
+2019-04-18 11:35:22,593 ERROR Responding with unauthorized error. Message - Full authentication is required to access this resource
+
+2019-04-18 11:43:47,582 WARN clearConfigHistory start
+
+2019-04-18 11:43:48,050 INFO [capacityManagement] start correct usage
+
+2019-04-18 11:43:48,055 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 11:53:47,608 WARN clearConfigHistory start
+
+2019-04-18 11:53:48,079 INFO [capacityManagement] start correct usage
+
+2019-04-18 11:53:48,085 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 12:03:47,634 WARN clearConfigHistory start
+
+2019-04-18 12:03:48,108 INFO [capacityManagement] start correct usage
+
+2019-04-18 12:03:48,114 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 12:13:47,673 WARN clearConfigHistory start
+
+2019-04-18 12:13:48,137 INFO [capacityManagement] start correct usage
+
+2019-04-18 12:13:48,144 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 12:23:47,709 WARN clearConfigHistory start
+
+2019-04-18 12:23:48,168 INFO [capacityManagement] start correct usage
+
+2019-04-18 12:23:48,174 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 12:33:47,770 WARN clearConfigHistory start
+
+2019-04-18 12:33:48,197 INFO [capacityManagement] start correct usage
+
+2019-04-18 12:33:48,203 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 12:43:47,796 WARN clearConfigHistory start
+
+2019-04-18 12:43:48,226 INFO [capacityManagement] start correct usage
+
+2019-04-18 12:43:48,234 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 12:53:47,822 WARN clearConfigHistory start
+
+2019-04-18 12:53:48,258 INFO [capacityManagement] start correct usage
+
+2019-04-18 12:53:48,264 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 13:03:47,848 WARN clearConfigHistory start
+
+2019-04-18 13:03:48,287 INFO [capacityManagement] start correct usage
+
+2019-04-18 13:03:48,293 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 13:13:47,876 WARN clearConfigHistory start
+
+2019-04-18 13:13:48,316 INFO [capacityManagement] start correct usage
+
+2019-04-18 13:13:48,323 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 13:23:47,902 WARN clearConfigHistory start
+
+2019-04-18 13:23:48,347 INFO [capacityManagement] start correct usage
+
+2019-04-18 13:23:48,356 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 13:33:47,928 WARN clearConfigHistory start
+
+2019-04-18 13:33:48,379 INFO [capacityManagement] start correct usage
+
+2019-04-18 13:33:48,385 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 13:42:44,285 INFO Expired JWT token.
+
+2019-04-18 13:42:44,286 ERROR Responding with unauthorized error. Message - Full authentication is required to access this resource
+
+2019-04-18 13:43:47,964 WARN clearConfigHistory start
+
+2019-04-18 13:43:48,408 INFO [capacityManagement] start correct usage
+
+2019-04-18 13:43:48,414 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 13:53:47,991 WARN clearConfigHistory start
+
+2019-04-18 13:53:48,437 INFO [capacityManagement] start correct usage
+
+2019-04-18 13:53:48,444 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 13:56:28,778 INFO Shutting down ExecutorService 'taskScheduler'
+
+2019-04-18 13:56:29,195 INFO Shutting down ExecutorService 'applicationTaskExecutor'
+
+2019-04-18 13:57:01,470 INFO Starting Nacos v1.0.0 on yufei with PID 9120 (D:\learning\project\microservice-community\center\nacos\target\nacos-server.jar started by 0049003133 in D:\learning\project\microservice-community\center\nacos\bin)
+
+2019-04-18 13:57:01,473 INFO The following profiles are active: standalone
+
+2019-04-18 13:57:03,987 INFO Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$209b3f7a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+
+2019-04-18 13:57:04,135 INFO Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+
+2019-04-18 13:57:04,139 INFO Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@6e9175d8' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+
+2019-04-18 13:57:04,142 INFO Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$456fe22c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+
+2019-04-18 13:57:04,148 INFO Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+
+2019-04-18 13:57:04,806 INFO Tomcat initialized with port(s): 8848 (http)
+
+2019-04-18 13:57:04,835 INFO Starting service [Tomcat]
+
+2019-04-18 13:57:04,835 INFO Starting Servlet Engine: Apache Tomcat/9.0.13
+
+2019-04-18 13:57:04,859 INFO An older version [1.2.16] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.18]
+
+2019-04-18 13:57:04,859 INFO Loaded APR based Apache Tomcat Native library [1.2.16] using APR version [1.6.3].
+
+2019-04-18 13:57:04,859 INFO APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+
+2019-04-18 13:57:04,859 INFO APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+
+2019-04-18 13:57:05,910 INFO OpenSSL successfully initialized [OpenSSL 1.0.2m  2 Nov 2017]
+
+2019-04-18 13:57:06,154 INFO Initializing Spring embedded WebApplicationContext
+
+2019-04-18 13:57:06,154 INFO Root WebApplicationContext: initialization completed in 4600 ms
+
+2019-04-18 13:57:07,033 INFO Use Mysql as the driver
+
+2019-04-18 13:57:09,170 INFO Initializing ExecutorService 'applicationTaskExecutor'
+
+2019-04-18 13:57:09,375 INFO Adding welcome page: class path resource [static/index.html]
+
+2019-04-18 13:57:09,791 INFO Creating filter chain: Ant [pattern='/'], []
+
+2019-04-18 13:57:09,791 INFO Creating filter chain: Ant [pattern='/**/*.css'], []
+
+2019-04-18 13:57:09,792 INFO Creating filter chain: Ant [pattern='/**/*.js'], []
+
+2019-04-18 13:57:09,792 INFO Creating filter chain: Ant [pattern='/**/*.html'], []
+
+2019-04-18 13:57:09,792 INFO Creating filter chain: Ant [pattern='/**/*.map'], []
+
+2019-04-18 13:57:09,793 INFO Creating filter chain: Ant [pattern='/**/*.svg'], []
+
+2019-04-18 13:57:09,793 INFO Creating filter chain: Ant [pattern='/**/*.png'], []
+
+2019-04-18 13:57:09,793 INFO Creating filter chain: Ant [pattern='/**/*.ico'], []
+
+2019-04-18 13:57:09,802 INFO Creating filter chain: Ant [pattern='/console-fe/public/**'], []
+
+2019-04-18 13:57:09,802 INFO Creating filter chain: Ant [pattern='/v1/auth/login'], []
+
+2019-04-18 13:57:09,802 INFO Creating filter chain: Ant [pattern='/v1/console/health/**'], []
+
+2019-04-18 13:57:09,802 INFO Creating filter chain: Ant [pattern='/v1/cs/**'], []
+
+2019-04-18 13:57:09,814 INFO Creating filter chain: Ant [pattern='/v1/ns/**'], []
+
+2019-04-18 13:57:09,814 INFO Creating filter chain: Ant [pattern='/v1/cmdb/**'], []
+
+2019-04-18 13:57:09,814 INFO Creating filter chain: Ant [pattern='/actuator/**'], []
+
+2019-04-18 13:57:09,815 INFO Creating filter chain: Ant [pattern='/v1/console/server/**'], []
+
+2019-04-18 13:57:09,862 INFO Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@302a07d, org.springframework.security.web.context.SecurityContextPersistenceFilter@616fe72b, org.springframework.security.web.header.HeaderWriterFilter@4d722ac9, org.springframework.security.web.authentication.logout.LogoutFilter@1dd6d4b7, com.alibaba.nacos.console.filter.JwtAuthenticationTokenFilter@5cdd09b1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7e7b159b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@293a5f75, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@8c11eee, org.springframework.security.web.session.SessionManagementFilter@77a7cf58, org.springframework.security.web.access.ExceptionTranslationFilter@2320fa6f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@366c4480]
+
+2019-04-18 13:57:09,900 INFO Exposing 2 endpoint(s) beneath base path '/actuator'
+
+2019-04-18 13:57:09,936 INFO Initializing ExecutorService 'taskScheduler'
+
+2019-04-18 13:57:10,088 INFO Tomcat started on port(s): 8848 (http) with context path '/nacos'
+
+2019-04-18 13:57:10,092 INFO Started Nacos in 9.873 seconds (JVM running for 11.322)
+
+2019-04-18 13:57:10,093 INFO Nacos Log files: D:\learning\project\microservice-community\center\nacos/logs/
+
+2019-04-18 13:57:10,093 INFO Nacos Conf files: D:\learning\project\microservice-community\center\nacos/conf/
+
+2019-04-18 13:57:10,093 INFO Nacos Data files: D:\learning\project\microservice-community\center\nacos/data/
+
+2019-04-18 13:57:10,094 INFO Nacos started successfully in stand alone mode.
+
+2019-04-18 13:57:13,941 INFO Initializing Spring DispatcherServlet 'dispatcherServlet'
+
+2019-04-18 13:57:13,942 INFO Initializing Servlet 'dispatcherServlet'
+
+2019-04-18 13:57:13,963 INFO Completed initialization in 21 ms
+
+2019-04-18 14:07:07,860 INFO [capacityManagement] start correct usage
+
+2019-04-18 14:07:07,902 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 14:07:08,049 WARN clearConfigHistory start
+
+2019-04-18 14:17:07,925 INFO [capacityManagement] start correct usage
+
+2019-04-18 14:17:07,932 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 14:17:08,077 WARN clearConfigHistory start
+
+2019-04-18 14:27:07,955 INFO [capacityManagement] start correct usage
+
+2019-04-18 14:27:07,960 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 14:27:08,104 WARN clearConfigHistory start
+
+2019-04-18 14:37:07,984 INFO [capacityManagement] start correct usage
+
+2019-04-18 14:37:07,997 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 14:37:08,132 WARN clearConfigHistory start
+
+2019-04-18 14:47:08,020 INFO [capacityManagement] start correct usage
+
+2019-04-18 14:47:08,082 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 14:47:08,159 WARN clearConfigHistory start
+
+2019-04-18 14:57:08,106 INFO [capacityManagement] start correct usage
+
+2019-04-18 14:57:08,122 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 14:57:08,193 WARN clearConfigHistory start
+
+2019-04-18 15:07:08,145 INFO [capacityManagement] start correct usage
+
+2019-04-18 15:07:08,151 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 15:07:08,231 WARN clearConfigHistory start
+
+2019-04-18 15:17:08,174 INFO [capacityManagement] start correct usage
+
+2019-04-18 15:17:08,189 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 15:17:08,258 WARN clearConfigHistory start
+
+2019-04-18 15:27:08,213 INFO [capacityManagement] start correct usage
+
+2019-04-18 15:27:08,235 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 15:27:08,285 WARN clearConfigHistory start
+
+2019-04-18 15:37:08,258 INFO [capacityManagement] start correct usage
+
+2019-04-18 15:37:08,286 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 15:37:08,318 WARN clearConfigHistory start
+
+2019-04-18 15:37:32,863 INFO Expired JWT token.
+
+2019-04-18 15:37:35,428 ERROR Responding with unauthorized error. Message - Full authentication is required to access this resource
+
+2019-04-18 15:37:37,224 INFO Expired JWT token.
+
+2019-04-18 15:37:37,243 ERROR Responding with unauthorized error. Message - Full authentication is required to access this resource
+
+2019-04-18 15:37:37,319 INFO Expired JWT token.
+
+2019-04-18 15:37:37,320 ERROR Responding with unauthorized error. Message - Full authentication is required to access this resource
+
+2019-04-18 15:47:08,318 INFO [capacityManagement] start correct usage
+
+2019-04-18 15:47:08,335 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 15:47:08,346 WARN clearConfigHistory start
+
+2019-04-18 15:57:08,359 INFO [capacityManagement] start correct usage
+
+2019-04-18 15:57:08,371 WARN clearConfigHistory start
+
+2019-04-18 15:57:08,383 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 16:07:08,406 INFO [capacityManagement] start correct usage
+
+2019-04-18 16:07:08,414 WARN clearConfigHistory start
+
+2019-04-18 16:07:08,443 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 16:17:08,443 WARN clearConfigHistory start
+
+2019-04-18 16:17:08,471 INFO [capacityManagement] start correct usage
+
+2019-04-18 16:17:08,490 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 16:25:10,078 INFO Expired JWT token.
+
+2019-04-18 16:25:10,079 ERROR Responding with unauthorized error. Message - Full authentication is required to access this resource
+
+2019-04-18 16:27:08,482 WARN clearConfigHistory start
+
+2019-04-18 16:27:08,513 INFO [capacityManagement] start correct usage
+
+2019-04-18 16:27:08,533 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 16:37:08,511 WARN clearConfigHistory start
+
+2019-04-18 16:37:08,557 INFO [capacityManagement] start correct usage
+
+2019-04-18 16:37:08,563 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 16:47:08,537 WARN clearConfigHistory start
+
+2019-04-18 16:47:08,586 INFO [capacityManagement] start correct usage
+
+2019-04-18 16:47:08,600 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 16:57:08,567 WARN clearConfigHistory start
+
+2019-04-18 16:57:08,624 INFO [capacityManagement] start correct usage
+
+2019-04-18 16:57:08,653 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 17:01:28,144 INFO Expired JWT token.
+
+2019-04-18 17:01:28,170 ERROR Responding with unauthorized error. Message - Full authentication is required to access this resource
+
+2019-04-18 17:07:08,604 WARN clearConfigHistory start
+
+2019-04-18 17:07:08,676 INFO [capacityManagement] start correct usage
+
+2019-04-18 17:07:08,699 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 17:17:08,630 WARN clearConfigHistory start
+
+2019-04-18 17:17:08,722 INFO [capacityManagement] start correct usage
+
+2019-04-18 17:17:08,741 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 17:27:08,689 WARN clearConfigHistory start
+
+2019-04-18 17:27:08,765 INFO [capacityManagement] start correct usage
+
+2019-04-18 17:27:08,792 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 17:37:08,736 WARN clearConfigHistory start
+
+2019-04-18 17:37:08,816 INFO [capacityManagement] start correct usage
+
+2019-04-18 17:37:08,834 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 17:47:08,821 WARN clearConfigHistory start
+
+2019-04-18 17:47:08,858 INFO [capacityManagement] start correct usage
+
+2019-04-18 17:47:08,871 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 17:57:08,859 WARN clearConfigHistory start
+
+2019-04-18 17:57:08,894 INFO [capacityManagement] start correct usage
+
+2019-04-18 17:57:08,916 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 18:07:08,890 WARN clearConfigHistory start
+
+2019-04-18 18:07:08,939 INFO [capacityManagement] start correct usage
+
+2019-04-18 18:07:08,954 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 18:17:08,927 WARN clearConfigHistory start
+
+2019-04-18 18:17:08,977 INFO [capacityManagement] start correct usage
+
+2019-04-18 18:17:08,995 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 18:22:30,299 INFO Shutting down ExecutorService 'taskScheduler'
+
+2019-04-18 18:22:30,558 INFO Shutting down ExecutorService 'applicationTaskExecutor'
+
+2019-04-18 18:24:38,975 INFO Starting Nacos v1.0.0 on yufei with PID 11500 (D:\learning\project\microservice-community\center\nacos\target\nacos-server.jar started by 0049003133 in D:\learning\project\microservice-community\center\nacos)
+
+2019-04-18 18:24:38,978 INFO The following profiles are active: standalone
+
+2019-04-18 18:24:41,481 INFO Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$1fd3b269] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+
+2019-04-18 18:24:41,619 INFO Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+
+2019-04-18 18:24:41,622 INFO Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@54422e18' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+
+2019-04-18 18:24:41,624 INFO Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$44a8551b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+
+2019-04-18 18:24:41,629 INFO Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+
+2019-04-18 18:24:42,390 INFO Tomcat initialized with port(s): 8848 (http)
+
+2019-04-18 18:24:42,424 INFO Starting service [Tomcat]
+
+2019-04-18 18:24:42,425 INFO Starting Servlet Engine: Apache Tomcat/9.0.13
+
+2019-04-18 18:24:42,445 INFO An older version [1.2.16] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.18]
+
+2019-04-18 18:24:42,445 INFO Loaded APR based Apache Tomcat Native library [1.2.16] using APR version [1.6.3].
+
+2019-04-18 18:24:42,445 INFO APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+
+2019-04-18 18:24:42,445 INFO APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+
+2019-04-18 18:24:43,491 INFO OpenSSL successfully initialized [OpenSSL 1.0.2m  2 Nov 2017]
+
+2019-04-18 18:24:43,688 INFO Initializing Spring embedded WebApplicationContext
+
+2019-04-18 18:24:43,688 INFO Root WebApplicationContext: initialization completed in 4583 ms
+
+2019-04-18 18:24:44,608 INFO Use Mysql as the driver
+
+2019-04-18 18:24:46,201 INFO Initializing ExecutorService 'applicationTaskExecutor'
+
+2019-04-18 18:24:46,379 INFO Adding welcome page: class path resource [static/index.html]
+
+2019-04-18 18:24:46,741 INFO Creating filter chain: Ant [pattern='/'], []
+
+2019-04-18 18:24:46,742 INFO Creating filter chain: Ant [pattern='/**/*.css'], []
+
+2019-04-18 18:24:46,743 INFO Creating filter chain: Ant [pattern='/**/*.js'], []
+
+2019-04-18 18:24:46,743 INFO Creating filter chain: Ant [pattern='/**/*.html'], []
+
+2019-04-18 18:24:46,743 INFO Creating filter chain: Ant [pattern='/**/*.map'], []
+
+2019-04-18 18:24:46,744 INFO Creating filter chain: Ant [pattern='/**/*.svg'], []
+
+2019-04-18 18:24:46,744 INFO Creating filter chain: Ant [pattern='/**/*.png'], []
+
+2019-04-18 18:24:46,745 INFO Creating filter chain: Ant [pattern='/**/*.ico'], []
+
+2019-04-18 18:24:46,745 INFO Creating filter chain: Ant [pattern='/console-fe/public/**'], []
+
+2019-04-18 18:24:46,745 INFO Creating filter chain: Ant [pattern='/v1/auth/login'], []
+
+2019-04-18 18:24:46,758 INFO Creating filter chain: Ant [pattern='/v1/console/health/**'], []
+
+2019-04-18 18:24:46,758 INFO Creating filter chain: Ant [pattern='/v1/cs/**'], []
+
+2019-04-18 18:24:46,759 INFO Creating filter chain: Ant [pattern='/v1/ns/**'], []
+
+2019-04-18 18:24:46,767 INFO Creating filter chain: Ant [pattern='/v1/cmdb/**'], []
+
+2019-04-18 18:24:46,767 INFO Creating filter chain: Ant [pattern='/actuator/**'], []
+
+2019-04-18 18:24:46,768 INFO Creating filter chain: Ant [pattern='/v1/console/server/**'], []
+
+2019-04-18 18:24:46,818 INFO Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@c35172e, org.springframework.security.web.context.SecurityContextPersistenceFilter@7966baa7, org.springframework.security.web.header.HeaderWriterFilter@2dd29a59, org.springframework.security.web.authentication.logout.LogoutFilter@2c7b5824, com.alibaba.nacos.console.filter.JwtAuthenticationTokenFilter@c2db68f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1253e7cb, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3b0c9195, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3cc41abc, org.springframework.security.web.session.SessionManagementFilter@53142455, org.springframework.security.web.access.ExceptionTranslationFilter@1dd6d4b7, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4bff64c2]
+
+2019-04-18 18:24:46,852 INFO Exposing 2 endpoint(s) beneath base path '/actuator'
+
+2019-04-18 18:24:46,880 INFO Initializing ExecutorService 'taskScheduler'
+
+2019-04-18 18:24:46,969 INFO Tomcat started on port(s): 8848 (http) with context path '/nacos'
+
+2019-04-18 18:24:46,974 INFO Started Nacos in 9.363 seconds (JVM running for 11.03)
+
+2019-04-18 18:24:46,975 INFO Nacos Log files: D:\learning\project\microservice-community\center\nacos/logs/
+
+2019-04-18 18:24:46,975 INFO Nacos Conf files: D:\learning\project\microservice-community\center\nacos/conf/
+
+2019-04-18 18:24:46,975 INFO Nacos Data files: D:\learning\project\microservice-community\center\nacos/data/
+
+2019-04-18 18:24:46,976 INFO Nacos started successfully in stand alone mode.
+
+2019-04-18 18:24:50,971 INFO Initializing Spring DispatcherServlet 'dispatcherServlet'
+
+2019-04-18 18:24:50,971 INFO Initializing Servlet 'dispatcherServlet'
+
+2019-04-18 18:24:50,989 INFO Completed initialization in 17 ms
+
+2019-04-18 18:25:35,091 INFO Expired JWT token.
+
+2019-04-18 18:25:35,114 ERROR Responding with unauthorized error. Message - Full authentication is required to access this resource
+
+2019-04-18 18:34:45,327 INFO [capacityManagement] start correct usage
+
+2019-04-18 18:34:45,369 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 18:34:45,462 WARN clearConfigHistory start
+
+2019-04-18 18:44:45,392 INFO [capacityManagement] start correct usage
+
+2019-04-18 18:44:45,400 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 18:44:45,490 WARN clearConfigHistory start
+
+2019-04-18 18:54:45,423 INFO [capacityManagement] start correct usage
+
+2019-04-18 18:54:45,429 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 18:54:45,516 WARN clearConfigHistory start
+
+2019-04-18 19:04:45,452 INFO [capacityManagement] start correct usage
+
+2019-04-18 19:04:45,459 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 19:04:45,543 WARN clearConfigHistory start
+
+2019-04-18 19:14:45,482 INFO [capacityManagement] start correct usage
+
+2019-04-18 19:14:45,490 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 19:14:45,570 WARN clearConfigHistory start
+
+2019-04-18 19:24:45,514 INFO [capacityManagement] start correct usage
+
+2019-04-18 19:24:45,518 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 19:24:45,597 WARN clearConfigHistory start
+
+2019-04-18 19:34:45,541 INFO [capacityManagement] start correct usage
+
+2019-04-18 19:34:45,549 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 19:34:45,625 WARN clearConfigHistory start
+
+2019-04-18 19:44:45,572 INFO [capacityManagement] start correct usage
+
+2019-04-18 19:44:45,578 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 19:44:45,652 WARN clearConfigHistory start
+
+2019-04-18 19:54:45,602 INFO [capacityManagement] start correct usage
+
+2019-04-18 19:54:45,609 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 19:54:45,680 WARN clearConfigHistory start
+
+2019-04-18 20:04:45,633 INFO [capacityManagement] start correct usage
+
+2019-04-18 20:04:45,641 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 20:04:45,707 WARN clearConfigHistory start
+
+2019-04-18 20:14:45,664 INFO [capacityManagement] start correct usage
+
+2019-04-18 20:14:45,672 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 20:14:45,734 WARN clearConfigHistory start
+
+2019-04-18 20:24:45,695 INFO [capacityManagement] start correct usage
+
+2019-04-18 20:24:45,703 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 20:24:45,761 WARN clearConfigHistory start
+
+2019-04-18 20:34:45,726 INFO [capacityManagement] start correct usage
+
+2019-04-18 20:34:45,734 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 20:34:45,788 WARN clearConfigHistory start
+
+2019-04-18 20:44:45,758 INFO [capacityManagement] start correct usage
+
+2019-04-18 20:44:45,766 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 20:44:45,815 WARN clearConfigHistory start
+
+2019-04-18 20:54:45,789 INFO [capacityManagement] start correct usage
+
+2019-04-18 20:54:45,798 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 20:54:45,843 WARN clearConfigHistory start
+
+2019-04-18 21:04:45,822 INFO [capacityManagement] start correct usage
+
+2019-04-18 21:04:45,829 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 21:04:45,869 WARN clearConfigHistory start
+
+2019-04-18 21:14:45,853 INFO [capacityManagement] start correct usage
+
+2019-04-18 21:14:45,860 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 21:14:45,896 WARN clearConfigHistory start
+
+2019-04-18 21:24:45,883 INFO [capacityManagement] start correct usage
+
+2019-04-18 21:24:45,890 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 21:24:45,923 WARN clearConfigHistory start
+
+2019-04-18 21:34:45,914 INFO [capacityManagement] start correct usage
+
+2019-04-18 21:34:45,921 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 21:34:45,950 WARN clearConfigHistory start
+
+2019-04-18 21:44:45,944 INFO [capacityManagement] start correct usage
+
+2019-04-18 21:44:45,951 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 21:44:45,976 WARN clearConfigHistory start
+
+2019-04-18 21:54:45,974 INFO [capacityManagement] start correct usage
+
+2019-04-18 21:54:45,982 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 21:54:46,002 WARN clearConfigHistory start
+
+2019-04-18 22:04:46,005 INFO [capacityManagement] start correct usage
+
+2019-04-18 22:04:46,015 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 22:04:46,030 WARN clearConfigHistory start
+
+2019-04-18 22:14:46,038 INFO [capacityManagement] start correct usage
+
+2019-04-18 22:14:46,045 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 22:14:46,057 WARN clearConfigHistory start
+
+2019-04-18 22:24:46,068 INFO [capacityManagement] start correct usage
+
+2019-04-18 22:24:46,074 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 22:24:46,084 WARN clearConfigHistory start
+
+2019-04-18 22:34:46,098 INFO [capacityManagement] start correct usage
+
+2019-04-18 22:34:46,105 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 22:34:46,110 WARN clearConfigHistory start
+
+2019-04-18 22:44:46,129 INFO [capacityManagement] start correct usage
+
+2019-04-18 22:44:46,136 WARN clearConfigHistory start
+
+2019-04-18 22:44:46,136 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 22:54:46,159 INFO [capacityManagement] start correct usage
+
+2019-04-18 22:54:46,162 WARN clearConfigHistory start
+
+2019-04-18 22:54:46,166 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 23:04:46,190 INFO [capacityManagement] start correct usage
+
+2019-04-18 23:04:46,191 WARN clearConfigHistory start
+
+2019-04-18 23:04:46,198 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 23:14:46,219 WARN clearConfigHistory start
+
+2019-04-18 23:14:46,221 INFO [capacityManagement] start correct usage
+
+2019-04-18 23:14:46,231 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 23:24:46,250 WARN clearConfigHistory start
+
+2019-04-18 23:24:46,254 INFO [capacityManagement] start correct usage
+
+2019-04-18 23:24:46,262 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 23:34:46,276 WARN clearConfigHistory start
+
+2019-04-18 23:34:46,285 INFO [capacityManagement] start correct usage
+
+2019-04-18 23:34:46,292 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 23:44:46,302 WARN clearConfigHistory start
+
+2019-04-18 23:44:46,315 INFO [capacityManagement] start correct usage
+
+2019-04-18 23:44:46,321 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-04-18 23:54:46,329 WARN clearConfigHistory start
+
+2019-04-18 23:54:46,345 INFO [capacityManagement] start correct usage
+
+2019-04-18 23:54:46,353 INFO [capacityManagement] end correct usage, cost: 0s
+
